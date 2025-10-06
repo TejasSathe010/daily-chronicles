@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Smooth paragraph rhythm */
+.prose p {
+  margin-top: 1.4em;
+  margin-bottom: 1.4em;
+  text-indent: 1.75em;
+  text-align: justify;
+}
+.prose p:first-of-type {
+  text-indent: 0;
+}
+
+/* Drop-cap removal: cleaner start */
+.prose p:first-of-type::first-letter {
+  all: unset;
+}
+
+/* Elegant list markers */
+.prose ul li::marker {
+  color: #1a73e8;
+}
+
+/* Subtle code typography */
+.prose pre code {
+  font-size: 0.95em;
+  letter-spacing: -0.015em;
+}
+
+/* Balanced horizontal rules */
+.prose hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  margin: 3em 0;
+}
